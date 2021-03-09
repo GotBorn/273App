@@ -2,6 +2,7 @@ package com.example.a253app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
@@ -41,9 +42,19 @@ public class MainActivity extends AppCompatActivity {
         else {
             isCorrectTextView.setBackgroundColor(declinedColor);
             isCorrectTextView.setText("Неправильный пароль");
-            loginEditText.setText("");
-            passwordEditText.setText("");
+            Intent i = new Intent(this, RegistrationActivity.class);
+            startActivityForResult(i, 1);
         }
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            loginEditText.setText(data.getStringExtra("login"));
+        }
+        else {
+            loginEditText.setText("");
+        }
+        passwordEditText.setText("");
     }
 
 }

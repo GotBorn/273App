@@ -4,34 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RegistrationActivity">
 
-    <TextView
-        android:id="@+id/isCorrectTextView"
-        android:layout_width="239dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="60dp"
-        android:autoText="false"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/submitButton"
-        android:layout_width="165dp"
-        android:layout_height="59dp"
+        android:layout_width="213dp"
+        android:layout_height="55dp"
         android:layout_marginStart="99dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="96dp"
         android:onClick="onClick"
-        android:text="Ввод"
+        android:text="Зарегестрироваться"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
@@ -88,5 +72,19 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="116dp"
+        android:text="Регистрация пользователя"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
